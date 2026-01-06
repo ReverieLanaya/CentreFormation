@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'[Affichage teoz activé]
+!pragma teoz true
+'[Titre du graphique]
+title Sequence diagram for " adding product to cart "
+
+'[Titre du cas d'utilisation]
+== Add product to cart ==
+
+'****** Initialisation acteur ******
+'[Cache titre de pied 'User' 'System']
+hide footbox
+
+
+'[Active 'barre de vie']
+Activate System
+Activate User
+
+'[Active la numérotation]
+autonumber
+
+'Début de la séquence
+alt#Gold #LightBlue
+    User -> System: Request available courses
+
+    System -> User: Display available courses
+
+    User -> System: Add chosen course to cart
+'Fin de la numérotation '
+autonumber stop
+end
+'[Désactive 'barre de vie']
+Deactivate System
+
+@enduml
