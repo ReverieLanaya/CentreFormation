@@ -2,24 +2,25 @@ package modele;
 import exceptions.FormationException;
 
 public class DescriptionFormation {
-    private String numero; // FR-XXXX-XXXX 
-    private String titulaire;
-    private double solde;
-    private double plafond; 
+    private String nom; 
+    private String description;
+    private int length;
+    private String workplace;
+    private double price;
 
-    public CompteBancaire(String numero, String titulaire, double solde, double plafond) throws BankException {
-        if (!numero.matches("^FR-\\d{4}-\\d{4}$")) { 
-            throw new BankException("Format invalide ");
-        }
-        this.numero = numero;
-        this.titulaire = titulaire;
-        this.solde = solde;
-        this.plafond = plafond;
+    public DescriptionFormation(String nom, String description, int length, String workplace, double price ) throws FormationException {
+        
+        this.nom = nom;
+        this.description = description;
+        this.length = length;
+        this.workplace = workplace;
+        this.price = price;
     }
 
     // Getters
-    public String getNumero() { return numero; }
-    public String getTitulaire() { return titulaire; }
-    public double getSolde() { return solde; }
-    public double getPlafond() { return plafond; }
+    public String getNom() { return nom; }
+    public String getDescription() { return description; }
+    public int getLength() { return length; }
+    public String getWorkplace() { return workplace; }
+    public double getPrice() { return price; }
 }
