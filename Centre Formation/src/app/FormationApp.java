@@ -13,8 +13,9 @@ public class FormationApp {
         FormationService service = new FormationService();
 
         try (Scanner sc = new Scanner(System.in)) {
-            boolean quitter = false;
-
+            boolean quitter = false; // this variable will be used to keep the program running until the user leave
+            
+            //while the variable "quitter" is false, we run the program
             while (!quitter) {
             	System.out.println("\n--- Centre de formation ---"); 
             	System.out.println("1. Afficher toutes les formations disponible"); 
@@ -35,7 +36,8 @@ public class FormationApp {
                             System.out.println("Voici la liste des formations disponibles :");
 
                             List<DescriptionFormation> formations = service.checkAllFormations();
-
+                            
+                            //we print each elements 1 by 1 from the list with this foreach
                             for (DescriptionFormation c : formations) {
                                 System.out.println(
                                     "Titre: " + c.getNom() +
@@ -53,7 +55,8 @@ public class FormationApp {
                         	System.out.println("Voici la liste des formations en présentiel :");
                         	
                             List<DescriptionFormation> formationsPre = service.checkFormationWorkplace("Présentiel");
-
+                            
+                            //we print each elements 1 by 1 from the list with this foreach
                             for (DescriptionFormation c : formationsPre) {
                                 System.out.println(
                                     "Titre: " + c.getNom() +
@@ -72,6 +75,7 @@ public class FormationApp {
                         	
                             List<DescriptionFormation> formationsTele = service.checkFormationWorkplace("Distanciel");
 
+                            //we print each elements 1 by 1 from the list with this foreach
                             for (DescriptionFormation c : formationsTele) {
                                 System.out.println(
                                     "Titre: " + c.getNom() +
@@ -96,7 +100,7 @@ public class FormationApp {
                         			System.out.println("Voici les formations trouvées :");
                                 	
                                     List<DescriptionFormation> formationsKeyWord = service.checkFormationKeyword(keyword);
-
+                                    //we print each elements 1 by 1 from the list with this foreach
                                     for (DescriptionFormation c : formationsKeyWord) {
                                         System.out.println(
                                             "Titre: " + c.getNom() +
@@ -120,8 +124,10 @@ public class FormationApp {
                             break;
           
                         case 7:
+                        	//case 7 means the user wants to leave the program
+                        	//we change the value of the "quitter" variable to "true" to end the loop and end the program
                             System.out.println("");
-                            quitter = true;
+                            quitter = true; 
                             System.out.println("Au revoir !!");
                             break;
 
