@@ -8,6 +8,12 @@ import service.FormationService;
 
 public class FormationApp {
 
+    /**
+     * <p>This is the main function of the program, will ask the user what he wants to do in the list of choices
+     * </p>
+     * @param Takes no parameter
+     * @return Returns nothing, void function 
+     */
     public static void main(String[] args) {
 
         FormationService service = new FormationService();
@@ -24,7 +30,8 @@ public class FormationApp {
             	System.out.println("4. Rechercher des formations par mot-clés"); 
             	System.out.println("5. Consulter son panier"); 
             	System.out.println("6. Créer un compte"); 
-            	System.out.println("7. Quitter"); System.out.print("Choix : ");
+            	System.out.println("7. Quitter"); 
+            	System.out.print("Choix : ");
 
                 int choix = sc.nextInt();
                 sc.nextLine();
