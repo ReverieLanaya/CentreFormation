@@ -31,6 +31,7 @@ public class FormationApp {
                 try {
                     switch (choix) {
                         case 1:
+                            System.out.println("");
                             System.out.println("Voici la liste des formations disponibles :");
 
                             List<DescriptionFormation> formations = service.checkAllFormations();
@@ -48,7 +49,7 @@ public class FormationApp {
                             
                         case 2: //Deuxieme choix : formation présentiel
                         	
-                        	
+                            System.out.println("");
                         	System.out.println("Voici la liste des formations en présentiel :");
                         	
                             List<DescriptionFormation> formationsPre = service.checkFormationWorkplace("Présentiel");
@@ -66,7 +67,7 @@ public class FormationApp {
                             
                         case 3: //Troisième choix : formation télétravail
                         	
-                        	
+                            System.out.println("");
                         	System.out.println("Voici la liste des formations en télétravail :");
                         	
                             List<DescriptionFormation> formationsTele = service.checkFormationWorkplace("Distanciel");
@@ -83,6 +84,7 @@ public class FormationApp {
                             break;
                             
                         	case 4: //quatrième choix : Chercher par mot clé
+                                System.out.println("");
                         		System.out.println("Quel mot clé voulez-vous utiliser ?");
                         		String keyword = sc.nextLine();
                         		
@@ -108,6 +110,7 @@ public class FormationApp {
                         		}
           
                         case 7:
+                            System.out.println("");
                             quitter = true;
                             System.out.println("Au revoir !!");
                             break;
