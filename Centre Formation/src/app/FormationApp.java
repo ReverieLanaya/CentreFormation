@@ -9,10 +9,7 @@ import service.FormationService;
 public class FormationApp {
 
     public static void main(String[] args) {
-        menu();
-    }
 
-    public static void menu() {
         FormationService service = new FormationService();
 
         try (Scanner sc = new Scanner(System.in)) {
@@ -109,11 +106,7 @@ public class FormationApp {
                                     }
                                     break;
                         		}
-
-                        	
-                        	
-                            
-                            
+          
                         case 7:
                             quitter = true;
                             System.out.println("Au revoir !!");
@@ -128,4 +121,5 @@ public class FormationApp {
             }
         }
     }
+
 }
