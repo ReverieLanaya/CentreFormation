@@ -20,8 +20,12 @@ public class FormationService {
         return DriverManager.getConnection(url, user, pass);
     }
 
-    //check all courses available in the store
-    //Exception happen 
+    /**
+     * <p>Check all of the Formations in the database
+     * </p>
+     * @param no parameter, it takes all of the c_product table content
+     * @return List<DescriptionFormation> formations -> list of all elements in the table c_product
+     */
     public List<DescriptionFormation> checkAllFormations() throws Exception {
         String query = "SELECT * FROM c_product";
         List<DescriptionFormation> formations = new ArrayList<>();
@@ -50,9 +54,13 @@ public class FormationService {
         return formations;
     }
 
+    /**
+     * <p>Check formation by "workplace" type, ask the user for options
+     * </p>
+     * @param String keyword -> Take String as parameter and only display when it's Distance or Présentiel
+     * @return List<DescriptionFormation> formations -> list of all elements in the table where the column "p_workplace" contains the user's choice : Distance or Présentiel
+     */
     
-    //Check formation by "workplace" type, ask the user for options 
-    //Take String as parameter and only display when it's Distance or Présentiel
     //Same exception as the checkAllFormation : either there are courses or not
     public List<DescriptionFormation> checkFormationWorkplace(String workplace) throws Exception {
         String query = "SELECT * FROM c_product WHERE p_workplace = ?";
@@ -86,7 +94,15 @@ public class FormationService {
         return formations;
     }
     
-    //Find Formation based on keywords in the description 
+    //
+    
+    /**
+     * <p>This function is used to find Formation based on keywords in the description 
+     * </p>
+     * @param String keyword -> needs to be a string in this situation 
+     * and will be used to search in the database if the Description contains the keyword
+     * @return List<DescriptionFormation> formations -> list of all elements where the Description(p_description) contains the keyword
+     */
     public List<DescriptionFormation> checkFormationKeyword(String keyword) throws Exception {
         String query = "SELECT * FROM c_product WHERE p_description LIKE  ?";
         List<DescriptionFormation> formations = new ArrayList<>();

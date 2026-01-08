@@ -108,6 +108,16 @@ public class FormationApp {
                                     }
                                     break;
                         		}
+                        		
+                        //Case 5 and 6 are not ready as of now so we just print a message and go back to the main menu
+                        case 5:
+                            System.out.println("");
+                            System.out.println("Cette fonctionnalité n'est pas encore disponible");
+                            break;
+                        case 6:
+                            System.out.println("");
+                            System.out.println("Cette fonctionnalité n'est pas encore disponible");
+                            break;
           
                         case 7:
                             System.out.println("");
