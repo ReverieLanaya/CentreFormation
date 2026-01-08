@@ -17,6 +17,6 @@ You need to be located in the eval_java repository and go to : eval_java\Centre 
 2. Afficher les formations en présentiel -> print in-person courses 
 3. Afficher les formations en télétravail -> print remote courses 
 4. Rechercher des formations par mot-clés  -> print courses where the description contains the keyword
-5. Consulter son panier 
-6. Créer un compte
-7. Quitter
+5. Consulter son panier -> can not be used yet so it will just print a message
+6. Créer un compte -> can not be used yet so it will just print a message
+7. Quitter -> will stop the program
